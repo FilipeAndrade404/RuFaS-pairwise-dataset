@@ -70,3 +70,8 @@ DataCollectionApp/schema/*
 !DataCollectionApp/schema/.keep
 
 docs/_build/
+
+# Pairwise dataset (generated)
+pairwise/work/
+pairwise/dataset/
+venv/

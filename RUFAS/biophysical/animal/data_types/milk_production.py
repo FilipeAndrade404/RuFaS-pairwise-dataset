@@ -110,6 +110,10 @@ class MilkProductionStatistics:
         The Estimated Breeding Value for protein of the animal, (kg). Defaults to None.
     ranking_index : float or None
         The ranking index of the animal, (unitless). Defaults to None.
+    enteric_methane : float or None
+        The daily enteric methane emitted by the cow, (g/day). Defaults to None.
+    dry_matter_intake : float or None
+        The daily dry matter intake of the cow, (kg/day). Defaults to None.
     """
 
     cow_id: int
@@ -136,6 +140,8 @@ class MilkProductionStatistics:
     EBV_fat: float | None = None
     EBV_protein: float | None = None
     ranking_index: float | None = None
+    enteric_methane: float | None = None
+    dry_matter_intake: float | None = None
 
     UNITS = {
         "cow_id": MeasurementUnits.UNITLESS,
@@ -148,6 +154,8 @@ class MilkProductionStatistics:
         "parity": MeasurementUnits.UNITLESS,
         "is_milking": MeasurementUnits.UNITLESS,
         "simulation_day": MeasurementUnits.SIMULATION_DAY,
+        "enteric_methane": MeasurementUnits.GRAMS_PER_DAY,
+        "dry_matter_intake": MeasurementUnits.KILOGRAMS_PER_DAY,
     }
     GENETIC_UNITS = {
         "days_born": MeasurementUnits.DAYS,

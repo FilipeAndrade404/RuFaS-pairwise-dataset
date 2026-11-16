@@ -1279,6 +1279,8 @@ class Animal:
                 EBV_fat=self.genetics.EBV_fat,
                 EBV_protein=self.genetics.EBV_protein,
                 ranking_index=self.genetics.ranking_index,
+                enteric_methane=self.digestive_system.enteric_methane_emission,
+                dry_matter_intake=self.nutrition_supply.dry_matter,
             )
         else:
             return MilkProductionStatistics(
@@ -1293,6 +1295,8 @@ class Animal:
                 days_born=self.days_born,
                 days_in_pregnancy=self.days_in_pregnancy,
                 animal_type=self.animal_type,
+                enteric_methane=self.digestive_system.enteric_methane_emission,
+                dry_matter_intake=self.nutrition_supply.dry_matter,
             )
 
     @property

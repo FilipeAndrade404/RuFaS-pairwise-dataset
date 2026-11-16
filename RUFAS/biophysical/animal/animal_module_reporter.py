@@ -147,6 +147,10 @@ class AnimalModuleReporter:
                 "parity": milk_stats.parity,
                 "simulation_day": simulation_day,
             }
+            if milk_stats.enteric_methane is not None:
+                updated_milk_data["enteric_methane"] = milk_stats.enteric_methane
+            if milk_stats.dry_matter_intake is not None:
+                updated_milk_data["dry_matter_intake"] = milk_stats.dry_matter_intake
             if AnimalConfig.simulate_genetics:
                 updated_milk_data["days_born"] = milk_stats.days_born
                 updated_milk_data["days_in_pregnancy"] = milk_stats.days_in_pregnancy

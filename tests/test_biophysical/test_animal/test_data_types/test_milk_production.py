@@ -179,6 +179,8 @@ def test_statistics_units_mapping_is_consistent() -> None:
         "ranking_index": MeasurementUnits.UNITLESS,
         "is_milking": MeasurementUnits.UNITLESS,
         "simulation_day": MeasurementUnits.SIMULATION_DAY,
+        "enteric_methane": MeasurementUnits.GRAMS_PER_DAY,
+        "dry_matter_intake": MeasurementUnits.KILOGRAMS_PER_DAY,
     }
 
     assert (MilkProductionStatistics.UNITS | MilkProductionStatistics.GENETIC_UNITS) == expected_units
